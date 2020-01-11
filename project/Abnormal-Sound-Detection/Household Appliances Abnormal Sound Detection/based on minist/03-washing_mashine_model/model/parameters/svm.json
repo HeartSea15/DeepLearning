@@ -1,0 +1,1 @@
+{"model_best_param": ["probability", "gamma", "C", "max_iter", "kernel"], "model_best_param_value": [true, 0.2, 10, 1000, "rbf"], "trainset_average_accuracy": 0.7098028169014085}

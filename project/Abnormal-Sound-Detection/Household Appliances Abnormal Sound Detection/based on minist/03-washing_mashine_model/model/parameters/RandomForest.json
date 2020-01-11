@@ -1,0 +1,1 @@
+{"model_best_param_value": [2, 2, 20], "trainset_average_accuracy": 0.8867042253521127, "model_best_param": ["min_samples_split", "min_samples_leaf", "n_estimators"]}

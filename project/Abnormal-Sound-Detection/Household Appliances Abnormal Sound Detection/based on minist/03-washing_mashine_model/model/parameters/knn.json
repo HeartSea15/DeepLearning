@@ -1,0 +1,1 @@
+{"model_best_param": ["leaf_size", "n_neighbors", "weights"], "model_best_param_value": [10, 1, "uniform"], "trainset_average_accuracy": 0.7329014084507042}
