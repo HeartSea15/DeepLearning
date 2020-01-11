@@ -1,32 +1,31 @@
-# paper-2018-HAASD
-HAASD: A dataset of Household Appliances Abnormal Sound Detection - paper replication data
+JY的数据集分析：
+JY论文中说生产线测量异常音和正常音，其实异常音是实验室测的，正常音是生产线测的。
 
-https://dl.acm.org/citation.cfm?id=3297186
+normal：
+01-1 - Background noise 
+	-- 20171030海尔洗衣机生产线数据处理\no_1生产线上背景噪声
 
-This project uses deep learning to detect the abnormal sound of home appliances such as washing machines, so as to realize the automatic classification of faulty home appliances and normal home appliances. The project contents are as follows:
+01-2 - Dehydration mode noise
+	-- 20171030海尔洗衣机生产线数据处理\no_3关盖脱水噪声跟着生产线走
+	-- 20171030海尔洗衣机生产线数据处理\no_4关盖脱水噪声跟着生产线走（远中近）
 
-First, the use of tools
-1, programming language: python
-2, IDE: pycharm
-3. Deep learning framework: Tensorflow
-4, matlab
-
-Second, the data set
-T10k-images-idx3-ubyte.gz, t10k-labels-idx1-ubyte.gz, train-images-idx3-ubyte.gz, train-labels-idx1-ubyte.gz four files are test set, test set Tag set, training set, training set tag set
-Tmp: This folder contains the data set. After creating the project, please store the folder in the root directory of the disk where the project is located.
-The two .m files in this folder are the ones used to process the raw data, one is to generate the training set and its tags, and the other is to generate the test set and its tags, and process the raw data to generate binary files.
-
-Third, the code
-Swallowsound: This folder contains the main program of the washing machine abnormal sound detection project, create a new project in pycharm and create a package called swallowsound, put all the files in the folder into the folder where the created package is located. You can run noise_deep_train.py, a trained model, and the output is an accuracy rate.
-Swallowsound_input_data.py: This program is used to import training sets, packaged separately into a module for other modules to call, improve code reuse rate
-Noise_softmax.py: This program uses softmax as a classifier to easily classify data.
-Noise_deep_3cnn.py: This program uses a three-layer convolution kernel convolutional neural network to train data and give prediction results.
-Logs: This folder contains the visualization files saved during the training process. Run it in the terminal: tensorboard --logdir=D:\pycharm\swallowsound\swallowsound\logs\ and follow the prompts to see the visualization in the browser. content
-Mynet: This folder stores the data stored during training. After the training program is interrupted, it can be used for the next training session.
-
-Fourth, evaluation
-Predicted results are accurate up to 85%
-
-If you have any questions or problems with the running program, you can contact WeChat, welcome to communicate and make progress together! Email: s.barry1994@foxmail.com
+01-3 - Wash mode noise
+	-- 20171030海尔洗衣机生产线数据处理\no_6洗涤测试
 
 
+abnormal：
+00-1 - Background noise        
+	-- 20171030海尔洗衣机实验室数据处理\no_10实验室2背景噪声
+
+00-2 - Dehydration mode noise  
+	-- 20171030海尔洗衣机实验室数据处理\no_2脱水状态（第二台听着不舒服样机）   
+	--20171030海尔洗衣机实验室数据处理\no_9关盖脱水电机异常声（电机异常声样机]）
+
+00-3 - Wash mode noise
+	-- 20171030海尔洗衣机实验室数据处理\no_8洗涤电机异常声
+	-- 20171030海尔洗衣机实验室数据处理\no_10洗涤声有问题
+	-- 20171030海尔洗衣机实验室数据处理\no_101洗涤声有问题58-60
+  
+  
+  
+  JY的Github链接: https://github.com/JYongSmile/soundevent_detect
